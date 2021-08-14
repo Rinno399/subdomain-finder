@@ -23,7 +23,7 @@ if P_T == "1" :
 
              pass
          else:
-             print("\033[1:32mFound>>",R_url,"\033[1;32m")
+             print("\033[1;32mFound>>",R_url,"\033[0m")
 
 else :
      for subdomain in subs:
@@ -34,4 +34,4 @@ else :
 
              pass
          else:
-             print("\033[1:32mFound>>",R_url,"\033[1;32m")
+             print("\033[1;32mFound>>",R_url,"\033[0m")
