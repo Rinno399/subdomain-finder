@@ -34,4 +34,4 @@ else :
 
              pass
          else:
-             print("Found>>",R_url)
+             print("\033[1:32mFound>>",R_url,"\033[1;32m"))
