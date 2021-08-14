@@ -1,0 +1,34 @@
+import requests
+
+
+print("\033[1;31mEner domain without protocol and www\033[0m")
+domain=input("\033[1;32m  Domain>>")
+print ("What is your Protocol\n Choice 1 or 2")
+print("""<<[1] https://""")
+print("""<<[2] http://""")
+P_T=input("Enter your protocol,[1]or[2]\n>>")
+file=open("sub.txt","r")
+data=file.read()
+subs=data.splitlines()
+
+if P_T == "1" :
+     for subdomain in subs:
+         R_url="https://"+subdomain+"."+domain
+         try:
+             requests.get(R_url)
+         except requests.ConnectionError:
+
+             pass
+         else:
+             print("Found>>",R_url)
+
+else :
+     for subdomain in subs:
+         R_url="http://"+subdomain+"."+domain
+         try:
+             requests.get(R_url)
+         except requests.ConnectionError:
+
+             pass
+         else:
+             print("Found>>",R_url)
